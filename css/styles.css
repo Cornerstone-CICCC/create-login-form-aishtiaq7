@@ -1,7 +1,6 @@
 *,
 *::before,
-*::after,
-input {
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -29,11 +28,11 @@ body p {
 
 header {
   min-height: 10vh;
-  border: 1px dotted #ffc632;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
+
 .row {
   padding: 1rem 0rem;
   display: flex;
@@ -45,11 +44,13 @@ header {
 input {
   margin-top: 0.2rem;
   width: 100%;
-  min-height: 30px;
+  min-height: 38px;
+}
+input::placeholder {
+  padding-left: 1rem;
 }
 
 .container {
-  border: 1px dotted white;
   width: 80%;
   margin: 0 auto;
 }
@@ -95,19 +96,21 @@ input {
   width: 100%;
 }
 .row.lastRow .remindMe {
-  border: 1px dotted red;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  max-width: 50%;
-  min-width: 300px;
+  max-width: 30%;
+  min-width: 200px;
 }
-.row.lastRow .remindMe .checkbox {
+.row.lastRow .remindMe input[type=checkbox], .row.lastRow .remindMe .checkbox {
   margin: 0;
   padding: 0;
-  background-color: red;
+  border: 2px solid red;
   max-width: 20%;
+  margin-right: 0.2rem;
 }
 .row.lastRow .forgot {
   width: 50%;

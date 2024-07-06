@@ -1,7 +1,6 @@
 *,
 *::before,
-*::after,
-input {
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -42,21 +41,16 @@ body {
 }
 
 header {
-  //   padding: 2rem;
   min-height: 10vh;
-  border: 1px dotted $primary-color;
+  //   border: 1px dotted $primary-color;
   display: flex;
   justify-content: flex-start;
 
   align-items: center;
-
-  svg {
-    // border: 1px dotted white;
-  }
 }
 .row {
   padding: 1rem 0rem;
-//   border: 0.5px solid greenyellow;
+  //   border: 0.5px solid greenyellow;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -66,11 +60,15 @@ header {
 input {
   margin-top: 0.2rem;
   width: 100%;
-  min-height: 30px;
+  min-height: 38px;
+
+  &::placeholder {
+    padding-left: 1rem;
+  }
 }
 
 .container {
-  border: 1px dotted white;
+  //   border: 1px dotted white;
   width: 80%;
   margin: 0 auto;
 }
@@ -121,22 +119,27 @@ input {
   width: 100%;
 
   .remindMe {
-    border: 1px dotted red;
+    // border: 1px dotted red;
+    // background-color: pink;
+    margin: 0;
+    padding: 0;
 
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 
-    max-width: 50%;
-    min-width: 300px;
+    max-width: 30%;
+    min-width: 200px;
 
-    .checkbox {
+    input[type="checkbox"], .checkbox {
         margin: 0;
         padding: 0;
-        background-color: red;
+        border: 2px solid red;
         max-width: 20%;
+        margin-right: 0.2rem;
     }
+    
   }
   .forgot {
     width: 50%;
@@ -146,7 +149,7 @@ input {
 
 .loginButton {
   width: 100%;
-  min-height:52px;
+  min-height: 52px;
   border-radius: 8px;
 }
 
