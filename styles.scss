@@ -64,7 +64,7 @@ input {
   border-radius: 10px;
 
   &::placeholder {
-    padding-left: 1rem;
+    padding-left: 0rem;
   }
 
   &:focus {
@@ -144,16 +144,40 @@ input {
   }
 
   .email {
-    padding-left: 30px;
+    padding-left: 2.5rem;
 
     &::placeholder {
       // color: #afb6c2; // Example placeholder color
     }
 
-    //   &:focus {
-    //     outline: none; // Remove default outline
-    //     border: 5px solid $primary-color; // Example: Change border color on focus
-    //   }
+    &:focus {
+        outline: none; // Remove default outline
+        border: 5px solid $primary-color; // Example: Change border color on focus
+        caret-color: transparent; // Remove blinking caret
+      }
+  }
+  &.password-wrapper {
+    &::before {
+      background-image: url("../images/lock.svg"); // Default icon for password
+    }
+
+    &.focus::before {
+      background-image: url("../images/lock-focus.svg"); // Change path on focus for password
+    }
+
+    .password {
+      //   padding-left: 30px;
+
+      &::placeholder {
+        padding-left: 2.5rem;
+      }
+
+      &:focus {
+        outline: none;
+        border: 5px solid $primary-color; 
+        caret-color: transparent; // Remove blinking caret
+      }
+    }
   }
 }
 

@@ -48,7 +48,7 @@ input {
   border-radius: 10px;
 }
 input::placeholder {
-  padding-left: 1rem;
+  padding-left: 0rem;
 }
 input:focus {
   outline: none;
@@ -115,8 +115,28 @@ input:focus {
   background-image: url("../images/mail-focus.svg");
 }
 .input-wrapper .email {
-  padding-left: 30px;
+  padding-left: 2.5rem;
 }
+.input-wrapper .email:focus {
+  outline: none;
+  border: 5px solid #ffc632;
+  caret-color: transparent;
+}
+.input-wrapper.password-wrapper::before {
+  background-image: url("../images/lock.svg");
+}
+.input-wrapper.password-wrapper.focus::before {
+  background-image: url("../images/lock-focus.svg");
+}
+.input-wrapper.password-wrapper .password::placeholder {
+  padding-left: 2.5rem;
+}
+.input-wrapper.password-wrapper .password:focus {
+  outline: none;
+  border: 5px solid #ffc632;
+  caret-color: transparent;
+}
+
 .inputRow {
   display: flex;
   justify-content: center;
