@@ -11,6 +11,7 @@ $title-text: #d4ccb6;
 $background: #191816;
 $form-background: #24221f;
 $primary-color: #ffc632;
+$placeholder-padding-left: 20px;
 
 :root {
   --text-base: #{$base-text};
@@ -58,6 +59,7 @@ header {
 }
 
 input {
+  padding-left: $placeholder-padding-left;
   margin-top: 0.2rem;
   width: 100%;
   min-height: 48px;
@@ -66,7 +68,7 @@ input {
   outline: none; // Remove default outline
 
   &::placeholder {
-    padding-left: 0rem;
+    padding-left: 5px;
   }
 
   &:focus {
@@ -146,10 +148,10 @@ input {
   }
 
   .email {
-    padding-left: 35px;
+    padding-left: $placeholder-padding-left;
 
     &::placeholder {
-      // color: #afb6c2; // Example placeholder color
+        padding-left: $placeholder-padding-left;
     }
 
     &:focus {
@@ -171,28 +173,16 @@ input {
       pointer-events: none;
       background-image: url("../images/lock.svg");
     }
-    // &::after{
-    //   content: "";
-    //   position: absolute;
-    //   right: 15px;
-    //   top: 55%;
-    //   transform: translateY(-50%);
-    //   width: 18px;
-    //   height: 18px;
-    //   background-size: contain;
-    //   pointer-events: none;
-    //   background-image: url("../images/eye.svg");
-    // }
 
     &.focus::before {
       background-image: url("../images/lock-focus.svg"); // Change path on focus for password
     }
 
     .password {
-      padding-left: 30px;
+        padding-left: $placeholder-padding-left;
 
       &::placeholder {
-        // padding-left: 2.5rem;
+        padding-left: $placeholder-padding-left;
       }
 
       &:focus {
@@ -241,16 +231,37 @@ input {
 
     max-width: 30%;
     min-width: 200px;
+    height: 100%;
 
-    input[type="checkbox"],
+    // input[type="checkbox"],
+    // .checkbox {
+    //   margin: 0;
+    //   padding: 0;
+    //   //   border: 2px solid red;
+    //   max-width: 20%;
+    //   margin-right: 0.2rem;
+    //   border-radius: 40px;
+    // }
     .checkbox {
-      margin: 0;
-      padding: 0;
-      //   border: 2px solid red;
-      max-width: 20%;
-      margin-right: 0.2rem;
-      border-radius: 40px;
-    }
+        // margin: 0.4rem;
+        margin: 0;
+        padding: 0;
+
+        width: 40px;
+        height: 40%;
+        border: 1px solid $base-text;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+        appearance: none; // Remove default checkbox appearance
+  
+        &:checked {
+          background: url('../images/check.svg') no-repeat center center;
+          background-color: orange;
+          filter: brightness(500%);
+          background-size: contain;
+        }
+      }
   }
   .forgot {
     width: 50%;
