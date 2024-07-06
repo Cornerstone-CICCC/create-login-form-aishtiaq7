@@ -15,11 +15,18 @@
 }
 
 body {
+  font-family: "Roboto", Courier, monospace;
   background-color: #191816;
+  color: #afb6c2;
+}
+body h3 {
+  font-size: 1rem;
+}
+body p {
+  font-size: 1rem;
 }
 
 header {
-  padding: 2rem;
   height: 15vh;
   border: 2px solid #ffc632;
   display: flex;
@@ -27,5 +34,54 @@ header {
   align-items: center;
 }
 header svg {
-  border: 2px solid white;
+  border: 1px dotted white;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  border: 1px dotted white;
+  max-width: 10%;
+  margin-right: 0.5rem;
+}
+
+.row {
+  padding: 1rem 0rem;
+  border: 1px solid green;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+.inputRow {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.row.lastRow {
+  justify-content: space-between;
+}
+
+.loginButton {
+  width: 100%;
+  min-height: 10vh;
+  border-radius: 8px;
+}
+
+.noAccount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=styles.css.map */

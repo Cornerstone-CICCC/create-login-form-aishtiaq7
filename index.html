@@ -8,7 +8,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
+    <header class="container">
       <svg
         width="112"
         height="29"
@@ -34,7 +34,48 @@
     </header>
     <main>
       <div class="container">
-        <div class="left"></div>
+        <div class="left">
+          <div class="login">
+            <div class="row">
+              <img class="logo" src="images/log-in.svg" alt="log-in" />
+              <h3>Login</h3>
+            </div>
+            <p>Insert your information below</p>
+
+            <form class="form" id="form">
+              <div class="inputRow row">
+                <label>Email</label>
+                <input
+                  type="email"
+                  class="email"
+                  id="email"
+                  placeholder="Type your email"
+                />
+              </div>
+
+              <div class="inputRow row">
+                <label>Password</label>
+                <input type="password" class="password" id="password" />
+              </div>
+
+              <div class="row lastRow">
+                <!-- boxicon -->
+                <div class="remindMe">
+                  <input type="checkbox" />
+                  <label>Remind me</label>
+                </div>
+
+                <p>Forgot my password</p>
+              </div>
+
+              <button class="loginButton">LOGIN</button>
+              <div class="row noAccount">
+                <p>Don't have and account? Sign up!</p>
+              </div>
+            </form>
+          </div>
+        </div>
+
         <div class="right"></div>
       </div>
     </main>
