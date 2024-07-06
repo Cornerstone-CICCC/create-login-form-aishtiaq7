@@ -36,11 +36,13 @@
       <div class="container">
         <div class="left">
           <div class="login">
-            <div class="row">
-              <img class="logo" src="images/log-in.svg" alt="log-in" />
-              <h3>Login</h3>
+            <div class="loginInfo">
+              <div class="loginTxt">
+                <img class="logo" src="images/log-in.svg" alt="log-in" />
+                <h3>Login</h3>
+              </div>
+              <p class="insert">Insert your information below</p>
             </div>
-            <p>Insert your information below</p>
 
             <form class="form" id="form">
               <div class="inputRow row">
@@ -55,17 +57,15 @@
 
               <div class="inputRow row">
                 <label>Password</label>
-                <input type="password" class="password" id="password" />
+                <input type="password" class="password" id="password" placeholder="Type your Password"/>
               </div>
 
               <div class="row lastRow">
-                <!-- boxicon -->
                 <div class="remindMe">
-                  <input type="checkbox" />
+                  <input type="checkbox" class="checkbox">
                   <label>Remind me</label>
                 </div>
-
-                <p>Forgot my password</p>
+                <p class="forgot">Forgot my password</p>
               </div>
 
               <button class="loginButton">LOGIN</button>
