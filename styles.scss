@@ -108,6 +108,10 @@ input {
       align-items: center;
       flex-direction: row;
       margin-bottom: 0.4rem;
+
+      .loginHeaderText{
+        font-size: 2rem;
+      }
     }
 
     .logo {
@@ -259,6 +263,7 @@ input {
 }
 
 .loginButton {
+    font-size: 1.2rem;
   width: 100%;
   min-height: 52px;
   border-radius: 8px;
@@ -275,6 +280,10 @@ input {
 .yellowHyperlink {
   color: $primary-color;
   font-weight: 500;
+
+  &:hover{
+    color: lighten($color: $primary-color, $amount: 15%)
+  }
 }
 
 .noAccount {
