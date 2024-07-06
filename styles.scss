@@ -60,7 +60,7 @@ header {
 input {
   margin-top: 0.2rem;
   width: 100%;
-  min-height: 40px;
+  min-height: 48px;
   border-radius: 10px;
 
   &::placeholder {
@@ -70,7 +70,6 @@ input {
   &:focus {
     outline: none; // Remove default outline
     border: 5px solid $primary-color; // Example: Change border color on focus
-    
   }
 }
 
@@ -88,7 +87,7 @@ input {
   .loginInfo {
     // background-color: purple;
     padding: 0.4rem 0;
-    margin: 0.2rem 0;
+    margin: 0.2rem 0 1.4rem 0;
 
     min-height: 10vh;
     display: flex;
@@ -117,6 +116,9 @@ input {
 }
 
 .input-wrapper {
+  // background-color: orange;
+  margin: 0;
+  padding: 0;
   width: 100%;
   position: relative;
   display: flex;
@@ -124,28 +126,35 @@ input {
   align-items: center;
   flex-direction: row;
 
-  .email {
-    padding-left: 30px;
-    &::placeholder {
-      // color: #afb6c2; // Example placeholder color
-    }
-  }
-
   &::before {
     content: "";
     position: absolute;
-    left: 10px; // Position the icon inside the input
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    width: 18px; // Adjust the size as needed
-    height: 18px; // Adjust the size as needed
-    background-image: url("../images/mail.svg"); // Corrected path
+    width: 18px;
+    height: 18px;
+    background-image: url("../images/mail.svg");
     background-size: contain;
-    pointer-events: none; // Prevent the icon from blocking input
-
- 
+    pointer-events: none;
   }
- 
+
+  &.focus::before {
+    background-image: url("../images/mail-focus.svg"); // Change path on focus
+  }
+
+  .email {
+    padding-left: 30px;
+
+    &::placeholder {
+      // color: #afb6c2; // Example placeholder color
+    }
+
+    //   &:focus {
+    //     outline: none; // Remove default outline
+    //     border: 5px solid $primary-color; // Example: Change border color on focus
+    //   }
+  }
 }
 
 .inputRow {

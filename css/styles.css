@@ -44,7 +44,7 @@ header {
 input {
   margin-top: 0.2rem;
   width: 100%;
-  min-height: 40px;
+  min-height: 48px;
   border-radius: 10px;
 }
 input::placeholder {
@@ -67,7 +67,7 @@ input:focus {
 }
 .login .loginInfo {
   padding: 0.4rem 0;
-  margin: 0.2rem 0;
+  margin: 0.2rem 0 1.4rem 0;
   min-height: 10vh;
   display: flex;
   justify-content: center;
@@ -90,15 +90,14 @@ input:focus {
 }
 
 .input-wrapper {
+  margin: 0;
+  padding: 0;
   width: 100%;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-}
-.input-wrapper .email {
-  padding-left: 30px;
 }
 .input-wrapper::before {
   content: "";
@@ -112,7 +111,12 @@ input:focus {
   background-size: contain;
   pointer-events: none;
 }
-
+.input-wrapper.focus::before {
+  background-image: url("../images/mail-focus.svg");
+}
+.input-wrapper .email {
+  padding-left: 30px;
+}
 .inputRow {
   display: flex;
   justify-content: center;
