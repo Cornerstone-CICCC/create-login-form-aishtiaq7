@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --text-base: #afb6c2;
+  --text-title: #d4ccb6;
+  --background: #191816;
+  --form-background: #24221f;
+  --primary-color: #ffc632;
+}
+
+body {
+  background-color: #191816;
+}
+
+header {
+  padding: 2rem;
+  height: 15vh;
+  border: 2px solid #ffc632;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+header svg {
+  border: 2px solid white;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+$base-text: #afb6c2;
+$title-text: #d4ccb6;
+$background: #191816;
+$form-background: #24221f;
+$primary-color: #ffc632;
+
+:root {
+  --text-base: #{$base-text};
+  --text-title: #{$title-text};
+  --background: #{$background};
+  --form-background: #{$form-background};
+  --primary-color: #{$primary-color};
+}
+
+body {
+  background-color: $background;
+}
+
+header {
+  padding: 2rem;
+  height: 15vh;
+  border: 2px solid $primary-color;
+  display: flex;
+  justify-content: flex-start;
+
+  align-items: center;
+
+  svg {
+    // width: 500px;
+    border: 2px solid white;
+  }
+}
