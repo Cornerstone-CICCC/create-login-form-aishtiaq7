@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 :root {
   --text-base: #afb6c2;
   --text-title: #d4ccb6;
@@ -42,16 +46,13 @@ header {
 }
 
 input {
-  padding-left: 20px;
+  padding-left: 35px;
   margin-top: 0.2rem;
   width: 100%;
   min-height: 48px;
   border-radius: 10px;
   border: none;
   outline: none;
-}
-input::placeholder {
-  padding-left: 5px;
 }
 input:focus {
   outline: none;
@@ -118,10 +119,7 @@ input:focus {
   background-image: url("../images/mail-focus.svg");
 }
 .input-wrapper .email {
-  padding-left: 20px;
-}
-.input-wrapper .email::placeholder {
-  padding-left: 20px;
+  padding-left: 35px;
 }
 .input-wrapper .email:focus {
   outline: none;
@@ -144,10 +142,7 @@ input:focus {
   background-image: url("../images/lock-focus.svg");
 }
 .input-wrapper.password-wrapper .password {
-  padding-left: 20px;
-}
-.input-wrapper.password-wrapper .password::placeholder {
-  padding-left: 20px;
+  padding-left: 35px;
 }
 .input-wrapper.password-wrapper .password:focus {
   outline: none;
@@ -173,12 +168,13 @@ input:focus {
   flex-direction: column;
 }
 
-.row.lastRow {
+.lastRow {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 }
-.row.lastRow .remindMe {
+.lastRow .remindMe {
   margin: 0;
   padding: 0;
   display: flex;
@@ -189,24 +185,31 @@ input:focus {
   min-width: 200px;
   height: 100%;
 }
-.row.lastRow .remindMe .checkbox {
-  margin: 0;
+.lastRow .remindMe .checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transform: scale(60%) translateX(-30%);
+  margin-right: -0.2em;
   padding: 0;
-  width: 40px;
-  height: 40%;
+  width: 45px;
   border: 1px solid #afb6c2;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
   appearance: none;
+  background-color: transparent;
 }
-.row.lastRow .remindMe .checkbox:checked {
-  background: url("../images/check.svg") no-repeat center center;
-  background-color: orange;
-  filter: brightness(500%);
+.lastRow .remindMe .checkbox:checked {
+  background-color: #ffc632;
+  background-image: url("../images/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: contain;
+  opacity: 1;
 }
-.row.lastRow .forgot {
+.lastRow .forgot {
   width: 50%;
   text-align: end;
 }
@@ -215,6 +218,19 @@ input:focus {
   width: 100%;
   min-height: 52px;
   border-radius: 8px;
+  background-color: #ffc632;
+  color: #191816;
+  font-weight: 800;
+  outline: none;
+  border: none;
+}
+.loginButton:active {
+  transform: scale(98%);
+}
+
+.yellowHyperlink {
+  color: #ffc632;
+  font-weight: 500;
 }
 
 .noAccount {

@@ -5,13 +5,16 @@
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 
 $base-text: #afb6c2;
 $title-text: #d4ccb6;
 $background: #191816;
 $form-background: #24221f;
 $primary-color: #ffc632;
-$placeholder-padding-left: 20px;
+$placeholder-padding-left: 35px;
 
 :root {
   --text-base: #{$base-text};
@@ -64,21 +67,20 @@ input {
   width: 100%;
   min-height: 48px;
   border-radius: 10px;
-  border: none; // Remove default border
-  outline: none; // Remove default outline
+  border: none; 
+  outline: none; 
 
-  &::placeholder {
-    padding-left: 5px;
-  }
+//   &::placeholder {
+//     // padding-left: 5px;
+//   }
 
   &:focus {
-    outline: none; // Remove default outline
-    border: 5px solid $primary-color; // Example: Change border color on focus
+    outline: none;
+    border: 5px solid $primary-color; 
   }
 }
 
 .container {
-  //   border: 1px dotted white;
   width: 80%;
   margin: 0 auto;
 }
@@ -89,7 +91,6 @@ input {
   margin-bottom: 1rem;
 
   .loginInfo {
-    // background-color: purple;
     padding: 0.4rem 0;
     margin: 0.2rem 0 1.4rem 0;
 
@@ -112,15 +113,12 @@ input {
     .logo {
       width: 28px;
       height: auto;
-      //   border: 1px dotted white;
-      //   max-width: 10%;
       margin-right: 0.5rem;
     }
   }
 }
 
 .input-wrapper {
-  // background-color: orange;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -150,13 +148,13 @@ input {
   .email {
     padding-left: $placeholder-padding-left;
 
-    &::placeholder {
-        padding-left: $placeholder-padding-left;
-    }
+    // &::placeholder {
+    //   //   padding-left: $placeholder-padding-left;
+    // }
 
     &:focus {
-      outline: none; // Remove default outline
-      border: 5px solid $primary-color; // Example: Change border color on focus
+      outline: none; 
+      border: 5px solid $primary-color; 
       caret-color: transparent; // Remove blinking caret
     }
   }
@@ -179,11 +177,11 @@ input {
     }
 
     .password {
-        padding-left: $placeholder-padding-left;
+      padding-left: $placeholder-padding-left;
 
-      &::placeholder {
-        padding-left: $placeholder-padding-left;
-      }
+    //   &::placeholder {
+    //     // padding-left: $placeholder-padding-left;
+    //   }
 
       &:focus {
         outline: none;
@@ -193,17 +191,16 @@ input {
     }
 
     .toggle-password-visibility {
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 18px;
-        height: 18px;
-        background-image: url("../images/eye-closed.svg");
-        background-size: contain;
-        cursor: pointer; 
-      }
-
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      background-image: url("../images/eye-closed.svg");
+      background-size: contain;
+      cursor: pointer;
+    }
   }
 }
 
@@ -213,14 +210,13 @@ input {
   align-items: flex-start;
   flex-direction: column;
 }
-.row.lastRow {
+.lastRow {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 100%;
 
   .remindMe {
-    // border: 1px dotted red;
-    // background-color: pink;
     margin: 0;
     padding: 0;
 
@@ -233,35 +229,28 @@ input {
     min-width: 200px;
     height: 100%;
 
-    // input[type="checkbox"],
-    // .checkbox {
-    //   margin: 0;
-    //   padding: 0;
-    //   //   border: 2px solid red;
-    //   max-width: 20%;
-    //   margin-right: 0.2rem;
-    //   border-radius: 40px;
-    // }
     .checkbox {
-        // margin: 0.4rem;
-        margin: 0;
-        padding: 0;
+      @include alignCenter();
+      transform: scale(60%) translateX(-30%);
+      margin-right: -0.2em;
+      padding: 0;
+      width: 45px;
+      border: 1px solid $base-text;
+      border-radius: 4px;
+      position: relative;
+      cursor: pointer;
+      appearance: none; // Remove default checkbox appearance
+      background-color: transparent; 
 
-        width: 40px;
-        height: 40%;
-        border: 1px solid $base-text;
-        border-radius: 4px;
-        position: relative;
-        cursor: pointer;
-        appearance: none; // Remove default checkbox appearance
-  
-        &:checked {
-          background: url('../images/check.svg') no-repeat center center;
-          background-color: orange;
-          filter: brightness(500%);
-          background-size: contain;
-        }
+      &:checked {
+        background-color: $primary-color; // Background color on click
+        background-image: url("../images/check.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        opacity: 1;
       }
+    }
   }
   .forgot {
     width: 50%;
@@ -273,6 +262,19 @@ input {
   width: 100%;
   min-height: 52px;
   border-radius: 8px;
+  background-color: $primary-color;
+  color: $background;
+  font-weight: 800;
+  outline: none;
+  border: none;
+
+  &:active {
+    transform: scale(98%);
+  }
+}
+.yellowHyperlink {
+  color: $primary-color;
+  font-weight: 500;
 }
 
 .noAccount {
