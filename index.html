@@ -35,56 +35,60 @@
     </header>
     <main>
       <div class="container">
-        <div class="left">
-          <div class="login">
-            <div class="loginInfo">
-              <div class="loginTxt">
-                <img class="logo" src="images/log-in.svg" alt="log-in" />
-                <h3 class="loginHeaderText">Login</h3>
+        <div class="content">
+          <div class="left">
+            <div class="login">
+              <div class="loginInfo">
+                <div class="loginTxt">
+                  <img class="logo" src="images/log-in.svg" alt="log-in" />
+                  <h3 class="loginHeaderText">Login</h3>
+                </div>
+                <p class="insert">Insert your information below</p>
               </div>
-              <p class="insert">Insert your information below</p>
+  
+              <form class="form" id="form">
+                <div class="input-container">
+                  <label for="email">E-mail</label>
+                  <div class="input-wrapper">
+                    <input
+                      type="email"
+                      class="email"
+                      id="email"
+                      placeholder="Type your email"
+                    />
+                  </div>
+                </div>
+  
+                <div class="inputRow row">
+                  <label for="password">Password</label>
+                  <div class="input-wrapper password-wrapper">
+                    <input type="password" class="password" id="password" placeholder="Type your Password" />
+                    <div class="toggle-password-visibility"></div>
+                  </div>
+                </div>
+  
+                <div class="row lastRow">
+                  <div class="remindMe">
+                    <input type="checkbox" class="checkbox">
+                    <label >Remind me</label>
+                  </div>
+                  <div class="forgot">
+                    <a href="#"><p class="yellowHyperlink" >Forgot my password</p></a>
+                  </div>
+                </div>
+  
+                <button class="loginButton" id="loginButton">LOGIN</button>
+                <div class="row noAccount">
+                  <a href="#"><p class="yellowHyperlink">Don't have and account? Sign up!</p></a>
+                </div>
+              </form>
             </div>
-
-            <form class="form" id="form">
-              <div class="input-container">
-                <label for="email">E-mail</label>
-                <div class="input-wrapper">
-                  <input
-                    type="email"
-                    class="email"
-                    id="email"
-                    placeholder="Type your email"
-                  />
-                </div>
-              </div>
-
-              <div class="inputRow row">
-                <label for="password">Password</label>
-                <div class="input-wrapper password-wrapper">
-                  <input type="password" class="password" id="password" placeholder="Type your Password" />
-                  <div class="toggle-password-visibility"></div>
-                </div>
-              </div>
-
-              <div class="row lastRow">
-                <div class="remindMe">
-                  <input type="checkbox" class="checkbox">
-                  <label >Remind me</label>
-                </div>
-                <div class="forgot">
-                  <a href="#"><p class="yellowHyperlink" >Forgot my password</p></a>
-                </div>
-              </div>
-
-              <button class="loginButton" id="loginButton">LOGIN</button>
-              <div class="row noAccount">
-                <a href="#"><p class="yellowHyperlink">Don't have and account? Sign up!</p></a>
-              </div>
-            </form>
           </div>
+          <div class="right">
+            <img src="images/side-image.jpg"  alt="sideimg">
         </div>
-
-        <div class="right"></div>
+          
+        </div>
       </div>
     </main>
   </body>

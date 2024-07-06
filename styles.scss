@@ -67,20 +67,21 @@ input {
   width: 100%;
   min-height: 48px;
   border-radius: 10px;
-  border: none; 
-  outline: none; 
+  border: none;
+  outline: none;
 
-//   &::placeholder {
-//     // padding-left: 5px;
-//   }
+  //   &::placeholder {
+  //     // padding-left: 5px;
+  //   }
 
   &:focus {
     outline: none;
-    border: 5px solid $primary-color; 
+    border: 5px solid $primary-color;
   }
 }
 
 .container {
+  border: 1px dotted black;
   width: 80%;
   margin: 0 auto;
 }
@@ -109,7 +110,7 @@ input {
       flex-direction: row;
       margin-bottom: 0.4rem;
 
-      .loginHeaderText{
+      .loginHeaderText {
         font-size: 2rem;
       }
     }
@@ -157,8 +158,8 @@ input {
     // }
 
     &:focus {
-      outline: none; 
-      border: 5px solid $primary-color; 
+      outline: none;
+      border: 5px solid $primary-color;
       caret-color: transparent; // Remove blinking caret
     }
   }
@@ -183,9 +184,9 @@ input {
     .password {
       padding-left: $placeholder-padding-left;
 
-    //   &::placeholder {
-    //     // padding-left: $placeholder-padding-left;
-    //   }
+      //   &::placeholder {
+      //     // padding-left: $placeholder-padding-left;
+      //   }
 
       &:focus {
         outline: none;
@@ -244,7 +245,7 @@ input {
       position: relative;
       cursor: pointer;
       appearance: none; // Remove default checkbox appearance
-      background-color: transparent; 
+      background-color: transparent;
 
       &:checked {
         background-color: $primary-color; // Background color on click
@@ -263,7 +264,7 @@ input {
 }
 
 .loginButton {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
   width: 100%;
   min-height: 52px;
   border-radius: 8px;
@@ -281,11 +282,46 @@ input {
   color: $primary-color;
   font-weight: 500;
 
-  &:hover{
-    color: lighten($color: $primary-color, $amount: 15%)
+  &:hover {
+    color: lighten($color: $primary-color, $amount: 15%);
   }
 }
 
 .noAccount {
   @include alignCenter(column);
+}
+
+.right {
+  display: none;
+  width: 100%;
+}
+
+// Tablet and Web
+@media only screen and (min-width: 1025px) {
+  body {
+    color: $base-text;
+    background-color: grey;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-area: "leftContent rightContent";
+
+    .left {
+      grid: leftContent;
+    }
+    .right {
+      img {
+        max-width: 100%;
+        display: block;
+        grid-area: rightContent;
+      }
+    }
+  }
+
+  .right {
+    display: block;
+  }
 }

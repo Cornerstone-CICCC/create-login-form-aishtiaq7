@@ -60,6 +60,7 @@ input:focus {
 }
 
 .container {
+  border: 1px dotted black;
   width: 80%;
   margin: 0 auto;
 }
@@ -245,4 +246,33 @@ input:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.right {
+  display: none;
+  width: 100%;
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    color: #afb6c2;
+    background-color: grey;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-area: "leftContent rightContent";
+  }
+  .content .left {
+    grid: leftContent;
+  }
+  .content .right img {
+    max-width: 100%;
+    display: block;
+    grid-area: rightContent;
+  }
+  .right {
+    display: block;
+  }
 }/*# sourceMappingURL=styles.css.map */
