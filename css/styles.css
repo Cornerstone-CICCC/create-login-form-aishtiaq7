@@ -16,8 +16,8 @@
 
 body {
   font-family: "Roboto", Courier, monospace;
-  background-color: #191816;
   color: #afb6c2;
+  background-color: #191816;
 }
 body h3 {
   font-size: 1.4rem;
@@ -87,6 +87,30 @@ input:focus {
   width: 28px;
   height: auto;
   margin-right: 0.5rem;
+}
+
+.input-wrapper {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.input-wrapper .email {
+  padding-left: 30px;
+}
+.input-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/mail.svg");
+  background-size: contain;
+  pointer-events: none;
 }
 
 .inputRow {
