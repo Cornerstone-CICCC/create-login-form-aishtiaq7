@@ -46,6 +46,8 @@ input {
   width: 100%;
   min-height: 48px;
   border-radius: 10px;
+  border: none;
+  outline: none;
 }
 input::placeholder {
   padding-left: 0rem;
@@ -115,7 +117,7 @@ input:focus {
   background-image: url("../images/mail-focus.svg");
 }
 .input-wrapper .email {
-  padding-left: 2.5rem;
+  padding-left: 35px;
 }
 .input-wrapper .email:focus {
   outline: none;
@@ -123,18 +125,38 @@ input:focus {
   caret-color: transparent;
 }
 .input-wrapper.password-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-size: contain;
+  pointer-events: none;
   background-image: url("../images/lock.svg");
 }
 .input-wrapper.password-wrapper.focus::before {
   background-image: url("../images/lock-focus.svg");
 }
-.input-wrapper.password-wrapper .password::placeholder {
-  padding-left: 2.5rem;
+.input-wrapper.password-wrapper .password {
+  padding-left: 30px;
 }
 .input-wrapper.password-wrapper .password:focus {
   outline: none;
   border: 5px solid #ffc632;
   caret-color: transparent;
+}
+.input-wrapper.password-wrapper .toggle-password-visibility {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  background-image: url("../images/eye-closed.svg");
+  background-size: contain;
+  cursor: pointer;
 }
 
 .inputRow {

@@ -62,6 +62,8 @@ input {
   width: 100%;
   min-height: 48px;
   border-radius: 10px;
+  border: none; // Remove default border
+  outline: none; // Remove default outline
 
   &::placeholder {
     padding-left: 0rem;
@@ -144,40 +146,74 @@ input {
   }
 
   .email {
-    padding-left: 2.5rem;
+    padding-left: 35px;
 
     &::placeholder {
       // color: #afb6c2; // Example placeholder color
     }
 
     &:focus {
-        outline: none; // Remove default outline
-        border: 5px solid $primary-color; // Example: Change border color on focus
-        caret-color: transparent; // Remove blinking caret
-      }
+      outline: none; // Remove default outline
+      border: 5px solid $primary-color; // Example: Change border color on focus
+      caret-color: transparent; // Remove blinking caret
+    }
   }
   &.password-wrapper {
     &::before {
-      background-image: url("../images/lock.svg"); // Default icon for password
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 18px;
+      background-size: contain;
+      pointer-events: none;
+      background-image: url("../images/lock.svg");
     }
+    // &::after{
+    //   content: "";
+    //   position: absolute;
+    //   right: 15px;
+    //   top: 55%;
+    //   transform: translateY(-50%);
+    //   width: 18px;
+    //   height: 18px;
+    //   background-size: contain;
+    //   pointer-events: none;
+    //   background-image: url("../images/eye.svg");
+    // }
 
     &.focus::before {
       background-image: url("../images/lock-focus.svg"); // Change path on focus for password
     }
 
     .password {
-      //   padding-left: 30px;
+      padding-left: 30px;
 
       &::placeholder {
-        padding-left: 2.5rem;
+        // padding-left: 2.5rem;
       }
 
       &:focus {
         outline: none;
-        border: 5px solid $primary-color; 
+        border: 5px solid $primary-color;
         caret-color: transparent; // Remove blinking caret
       }
     }
+
+    .toggle-password-visibility {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        background-image: url("../images/eye-closed.svg");
+        background-size: contain;
+        cursor: pointer; 
+      }
+
   }
 }
 
