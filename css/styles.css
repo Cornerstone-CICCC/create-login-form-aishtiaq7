@@ -235,6 +235,7 @@ input:focus {
 .yellowHyperlink {
   color: #ffc632;
   font-weight: 500;
+  white-space: nowrap;
 }
 .yellowHyperlink:hover {
   color: #ffdb7f;

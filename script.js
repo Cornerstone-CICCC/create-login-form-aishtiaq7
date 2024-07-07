@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const email = document.getElementById("email");
   const password = document.getElementById("password");
   const form = document.getElementById("form");
+  const checkbox = document.getElementById("checkbox");
   const togglePasswordVisibility = document.querySelector(
     ".toggle-password-visibility"
   );
@@ -36,9 +37,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  //form submission
   form.addEventListener('submit', (e)=>{
     e.preventDefault();
     console.log('clicked');
+    const loginData = {
+        email: email.value,
+        password: password.value,
+        remindMe: checkbox.checked,
+    }
+    console.log('loginData:', loginData);
   })
 
 });

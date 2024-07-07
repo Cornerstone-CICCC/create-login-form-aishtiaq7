@@ -281,6 +281,7 @@ input {
 .yellowHyperlink {
   color: $primary-color;
   font-weight: 500;
+  white-space: nowrap;
 
   &:hover {
     color: lighten($color: $primary-color, $amount: 15%);
