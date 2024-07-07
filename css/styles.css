@@ -340,4 +340,11 @@ input:focus {
   main {
     padding: 1rem 2.8rem;
   }
+  header {
+    min-height: 10vh;
+    padding: 1rem 2.8rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }/*# sourceMappingURL=styles.css.map */

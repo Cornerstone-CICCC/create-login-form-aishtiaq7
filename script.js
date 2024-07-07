@@ -38,15 +38,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //form submission
-  form.addEventListener('submit', (e)=>{
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
-    console.log('clicked');
     const loginData = {
-        email: email.value,
-        password: password.value,
-        remindMe: checkbox.checked,
-    }
-    console.log('loginData:', loginData);
-  })
+      email: email.value,
+      password: password.value,
+      remindMe: checkbox.checked,
+    };
 
+    if (loginData.email.length === 0 || loginData.password.length === 0) {
+      return;
+    } else {
+      email.value = "";
+      password.value = "";
+      checkbox.checked = false;
+
+      console.log("loginData:", loginData);
+    }
+  });
 });
