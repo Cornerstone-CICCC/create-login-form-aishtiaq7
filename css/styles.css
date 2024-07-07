@@ -335,4 +335,9 @@ input:focus {
   .loginButton:active {
     transform: scale(98%);
   }
+}
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  main {
+    padding: 1rem 2.8rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

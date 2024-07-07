@@ -81,7 +81,7 @@ input {
 }
 
 .container {
-//   border: 1px dotted black;
+  //   border: 1px dotted black;
   width: 80%;
   margin: 0 auto;
 }
@@ -297,7 +297,8 @@ input {
   width: 100%;
 }
 
-// Tablet and Web
+
+// Web
 @media only screen and (min-width: 1025px) {
   body {
     font-family: "Roboto", Courier, monospace;
@@ -342,17 +343,17 @@ input {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
-  
+
     .loginInfo {
       padding: 0.4rem 0;
       margin: 0.2rem 0 1.4rem 0;
-  
+
       min-height: 10vh;
       display: flex;
       justify-content: center;
       align-items: flex-start;
       flex-direction: column;
-  
+
       .loginTxt {
         width: 100%;
         height: 40%;
@@ -361,12 +362,12 @@ input {
         align-items: center;
         flex-direction: row;
         margin-bottom: 0.4rem;
-  
+
         .loginHeaderText {
           font-size: 1.6rem;
         }
       }
-  
+
       .logo {
         width: 28px;
         height: auto;
@@ -389,5 +390,11 @@ input {
     &:active {
       transform: scale(98%);
     }
+  }
+}
+// Tablet
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  main {
+    padding: 1rem 2.8rem;
   }
 }
