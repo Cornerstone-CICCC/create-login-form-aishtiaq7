@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (password.type === "password") {
       password.type = "text";
       togglePasswordVisibility.style.backgroundImage =
-        "url('../images/eye.svg')"; // Optional: Change icon to eye-slash when visible
+        "url('../images/eye.svg')"; // Change icon to eye-slash when visible
     } else {
       password.type = "password";
       togglePasswordVisibility.style.backgroundImage =
@@ -53,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       password.value = "";
       checkbox.checked = false;
 
+      //do something with data
       console.log("loginData:", loginData);
     }
   });

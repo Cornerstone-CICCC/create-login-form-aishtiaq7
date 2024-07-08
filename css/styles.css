@@ -337,14 +337,8 @@ input:focus {
   }
 }
 @media only screen and (min-width: 700px) and (max-width: 1024px) {
-  main {
-    padding: 1rem 2.8rem;
-  }
-  header {
-    min-height: 10vh;
-    padding: 1rem 2.8rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  .container {
+    width: 70%;
+    margin: 0 auto;
   }
 }/*# sourceMappingURL=styles.css.map */
